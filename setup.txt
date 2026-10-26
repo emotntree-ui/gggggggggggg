@@ -1,0 +1,23 @@
+GUILD-GLORY / DRIFT — UPGRADED SOURCE
+
+Install:
+  pip install -r requirements.txt
+
+Configure:
+  Copy .env.example values into your shell environment before first launch.
+  ADMIN_USERNAME defaults to admin.
+  Set ADMIN_PASSWORD to a unique password. If omitted, app.py prints a one-time random bootstrap password.
+
+Run:
+  python app.py
+
+Website:
+  http://127.0.0.1:20333/
+  http://127.0.0.1:20333/login
+  http://127.0.0.1:20333/signup
+  http://127.0.0.1:20333/client
+  http://127.0.0.1:20333/admin
+
+New API documentation: README_UPGRADE_HI.md
+Pricing is in INR (₹): Basic ₹149 / Premium ₹1,799 per credit. To enable UPI checkout, copy `payment_config.example.json` to `payment_config.json` and set `upi_receiver_id` to your own verified receiving UPI ID and `upi_receiver_name` to the payee name. Alternatively set UPI_RECEIVER_ID and UPI_RECEIVER_NAME in the server environment (environment values override the file). The UPI intent can open installed UPI apps such as FamPay where supported; it is NOT an official FamPay merchant API integration and does not auto-verify payments. Admin must verify the UTR before approving credits. Keep the receiving UPI ID and any provider API secrets on the server; never put secrets in HTML.
+Web Push storage works, but delivery requires VAPID keys and a configured delivery worker.
